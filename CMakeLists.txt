@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.7)
 project(protobufqt)
 
+set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
+
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
-
-
+conan_basic_setup(TARGETS KEEP_RPATHS)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
@@ -19,4 +19,4 @@ set(COMPILER_SRCS
 add_executable(protoc-gen-qt ${COMPILER_SRCS})
 target_link_libraries(protoc-gen-qt PUBLIC CONAN_PKG::protobuf)
 
-install(TARGETS protoc-gen-qt  RUNTIME DESTINATION bin)
+install(TARGETS protoc-gen-qt RUNTIME DESTINATION bin)
