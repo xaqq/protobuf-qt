@@ -104,7 +104,7 @@ namespace
                                           const google::protobuf::EnumDescriptor &enum_descriptor)
     {
         writer.write(
-            "class $enum_name$Wrapper {\n"
+            "class $enum_name$Wrapper : public QObject{\n"
             "  Q_GADGET\n"
             "public:\n"
             "  enum $enum_name$ {\n",
