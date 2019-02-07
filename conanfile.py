@@ -3,7 +3,7 @@ from conans import ConanFile, CMake
 class ProtobufQt(ConanFile):
     name = "protobuf-qt"
     version = "1.0"
-    settings = "os", "compiler", "build_type", "arch"
+    settings = "os", "arch_build"
     build_requires = "protobuf/3.6.1@bincrafters/stable"
     exports_sources = "*"
     generators = "cmake"

@@ -459,7 +459,7 @@ namespace
 
         writer.write(
             "\n"
-            "signals:\n"
+            "Q_SIGNALS:\n"
         );
 
         for (const google::protobuf::FieldDescriptor &field : repeated_field_adaptor(descriptor))
